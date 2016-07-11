@@ -1,0 +1,21 @@
+{
+  "name": "designvoter",
+  "description": "Web application that lets users vote on designs",
+  "main": "index.js",
+  "authors": [
+    "Jonathen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jonathen09/designVoter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}
