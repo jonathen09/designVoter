@@ -15,10 +15,7 @@ app.use(express.static(__dirname + '/../client'));
 
 //Routes
 app.get('/designs', function(req, res) {
-  if (req.query.count) {
     return res.json(db.length);
-  }
-  return res.json(db);
 });
 
 app.get('/designs/:id', function(req, res) {

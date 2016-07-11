@@ -1,5 +1,9 @@
 angular.module('app.services', [])
 
+.factory('_', function() {
+  return window._;
+})
+
 .factory('Designs', function($http) {
 
   var getAll = function() {
@@ -29,7 +33,6 @@ angular.module('app.services', [])
       return resp;
     });
   };
-
 
   return {
     getAll: getAll,
