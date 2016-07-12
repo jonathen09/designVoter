@@ -7,7 +7,7 @@ angular.module('app', ['app.services'])
 
   $scope.error = false;
   $scope.available = true;
-  $scope.end = false;
+  $scope.ended = false;
 
   Designs.getAll()
     .then(function(resp) {
@@ -35,7 +35,7 @@ angular.module('app', ['app.services'])
             });
         }
         $scope.available = false;
-        $scope.end = true;
+        $scope.ended = true;
       })
       .catch(function(err) {
         console.log(err);
