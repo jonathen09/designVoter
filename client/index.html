@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html>
-
+<html ng-app="app">
   <head>
     <title>Design Voter</title>
     <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/styles/styles.css">
   </head>
-
   <body>
-
-
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/underscore/underscore-min.js"></script>
-  <script src="app/app.js"></script>
+    <h3 class="sub-header">YOU VOTE, WE'LL SELL THE WINNERS!</h3>
+    <h2 class="main-header">Drawing and Sketching Art Challenge </h2>
+    <div ng-controller="AppController" ng-cloak>
+      <div ng-model="currentDesign" ng-show="available">
+        <div class="design-thumbnail-container">
+          <img ng-src="{{currentDesign.design_thumbnail}}" class="design-thumbnail">
+        </div>
+        <h3 class="design-name">{{currentDesign.design_name}}</h3>
+        <form class="vote-form">
+          <input class="vote-circle" type="submit" value="1" ng-click="vote(1)">
+          <input class="vote-circle" type="submit" value="2" ng-click="vote(2)">
+          <input class="vote-circle" type="submit" value="3" ng-click="vote(3)">
+          <input class="vote-circle" type="submit" value="4" ng-click="vote(4)">
+          <input class="vote-circle" type="submit" value="5" ng-click="vote(5)">
+        </form>
+        <div class="voting-decoration">
+          <span class="min-description">MEH</span>
+          <span class="max-description">LOVE IT</span>
+        </div>
+        <div class="artist-description">
+          <img ng-src="{{currentDesign.artist_thumbnail}}" class="artist-thumbnail">
+          <div class="artist-text-description">
+            <div>by <span class="artist-name">{{currentDesign.artist_name}}</span></div>
+            <div class="artist-location">{{currentDesign.artist_location}}</div>
+          </div>
+          <button class="artist-more" ng-click="null">Other Works </button>
+        </div>
+      </div>
+      <div ng-show="end" class="log" ng-cloak> No more Designs!!!</div>
+      <div ng-show="error" class="log" ng-cloak> Error occured. Fix being applied </div>
+    </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/app.js"></script>
   </body>
 
 </html>

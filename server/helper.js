@@ -1,7 +1,7 @@
-var db = require('/db/db.js');
+var db = require('./db/db.js');
 
 exports.isValidID = function(id) {
-  if (id >= 0 && vote < db.length) {
+  if (id >= 0 && id < db.length) {
     return true;
   }
   return false;

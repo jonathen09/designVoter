@@ -19,17 +19,17 @@ app.get('/designs', function(req, res) {
 });
 
 app.get('/designs/:id', function(req, res) {
-  var id = req.params.id;
-  if (helper.isValidID(id)) { // within the list length
+  var id = JSON.parse(req.params.id);
+  if (helper.isValidID(id)) {
     return res.json(db[id]);
   }
-  return res.sendStatus(404);            // Error found
+  return res.sendStatus(404);
 });
 
 app.put('/designs/:id', function(req, res) {
   var id = req.params.id;
-  var vote = req.body.vote;
-  if (helper.isValidId(id) && helper.isValidVote(vote)) {
+  var vote = JSON.parse(req.body.vote);
+  if (helper.isValidID(id) && helper.isValidVote(vote)) {
     helper.addVote(id, vote);
     return res.sendStatus(200);
   }

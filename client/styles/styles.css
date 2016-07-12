@@ -1,0 +1,153 @@
+body {
+  font-family: Papyrus, fantasy;
+  text-align: center;
+  color: #403737;
+}
+
+.main-header {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.sub-header {
+  color: grey;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.design-thumbnail-container {
+  height:500px;
+  position: relative;
+}
+
+.design-thumbnail {
+  max-height: 500px;
+  max-width: 500px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: inline-block;
+}
+
+.design-name {
+  color: grey;
+  font-size:20px;
+  margin-top:0px;
+  margin-bottom:10px;
+}
+
+.vote-form {
+  max-width: 500px;
+  margin:0 auto;
+}
+
+.vote-circle {
+  cursor: crosshair;
+  height: 60px;
+  width: 60px;
+  padding:20px;
+  border-radius: 100%;
+  font-size: 16px;
+  text-align: center;
+  background-color: white;
+  border: solid grey 3px;
+  margin: 10px;
+  color: grey;
+}
+
+.vote-circle:hover {
+  color: white;
+  background-color: #9C9E98;
+}
+
+.vote-circle:focus {
+  outline: 0;
+}
+
+.voting-decoration {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  border-bottom: solid #9C9E98 1px;
+  color: grey;
+}
+
+.min-description {
+  float: left;
+  padding-left:5px;
+}
+
+.max-description {
+  float: right;
+}
+
+.artist-description {
+  max-width: 350px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.artist-thumbnail {
+  float: left;
+  margin: 0 auto;
+  border-radius: 100%;
+  height: 70px;
+  width: 70px;
+}
+
+.artist-text-description {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.artist-name {
+  font-size: 24px;
+  margin-left: 2px;
+}
+
+.artist-location {
+  margin: 0 auto;
+  font-size: 18px;
+  color: grey;
+}
+
+.artist-more {
+  float:center;
+  font-family: Papyrus fantasy;
+  height: 30px;
+  width: 200px;
+  color: black;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: white;
+  border: solid grey 3px;
+}
+
+.artist-more:hover {
+  cursor: crosshair;
+  color: white;
+  background-color: grey;
+}
+
+.log {
+  display: none;
+  max-width: 600px;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 50px;
+  color: black;
+  border-style: solid;
+  border-width: 5px;
+  background: #ffffcc;
+}
+
+

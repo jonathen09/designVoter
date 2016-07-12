@@ -6,8 +6,8 @@ angular.module('app', ['app.services'])
   var total;
 
   $scope.error = false;
-  $scope.more = false;
-  $scope.end = true;
+  $scope.available = true;
+  $scope.end = false;
 
   Designs.getAll()
     .then(function(resp) {
@@ -20,7 +20,7 @@ angular.module('app', ['app.services'])
     })
     .catch(function(err) {
       console.log(err);
-      $scope.more = false;
+      $scope.available = false;
       $scope.error = true;
     });
 
@@ -29,17 +29,17 @@ angular.module('app', ['app.services'])
       .then(function() {
         currentPosition++;
         if (currentPosition < total) {
-          Designs.getOne(designs[currentPosition])
+          return Designs.getOne(designs[currentPosition])
             .then(function(resp) {
               $scope.currentDesign = resp.data;
             });
         }
-        $scope.more = false;
+        $scope.available = false;
         $scope.end = true;
       })
       .catch(function(err) {
         console.log(err);
-        $scope.more = false;
+        $scope.available = false;
         $scope.error = true;
       });
   };
