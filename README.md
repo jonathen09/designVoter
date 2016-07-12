@@ -12,3 +12,6 @@ Screenshots
 - Bower install
 - npm run
 - navigate to selected port (defaulted to localhost:3000)
+
+#Dependencies
+Node
